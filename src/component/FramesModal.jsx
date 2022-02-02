@@ -147,16 +147,16 @@ export default class FramesModal extends React.PureComponent {
         <div className="modal-box">
           <div className="modal-header">
             <a href="#" className="modal-close" onClick={this.close}>X</a>
-            <h3 className="modal-title">图片转化结果</h3>
+            <h3 className="modal-title">Results:</h3>
           </div>
           <Divide />
           <div className="output-options">
-            <label htmlFor="color">文字颜色:</label>
+            <label htmlFor="color">Text Color:</label>
             <input type="color" id="color" name="color" value={this.state.color} onChange={this.setColor} />
-            <label htmlFor="color">背景颜色:</label>
+            <label htmlFor="color">Background Color:</label>
             <input type="color" id="bgColor" name="bgColor" value={this.state.bgColor} onChange={this.setBgColor} />
             <Button className="save-btn" onClick={this.savePic}>
-              保存为图片
+              Save
             </Button>
           </div>
           <Divide />

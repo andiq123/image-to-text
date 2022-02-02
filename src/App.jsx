@@ -92,7 +92,7 @@ export default class App extends React.Component {
     return (
       <div>
         <header className="clear">
-          <h1 className="text-center">图片转字符画工具</h1>
+          <h1 className="text-center">Transform from image to text</h1>
         </header>
         {/* github fork me ribbons */}
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/kainstar/image-to-text">
@@ -100,21 +100,21 @@ export default class App extends React.Component {
         </a>
         <Divide/>
         <Row className="transform-settings-wrapper">
-          <TransformSetting label="目标图片宽度:" labelFor="transform-size">
+          <TransformSetting label="Width:" labelFor="transform-size">
             <input type="number" id="transform-size" className="transform-size-input" name="transform-size" value={this.state.transformWidth} onChange={this.setTransformWidth} />
           </TransformSetting>
-          <Button onClick={this.rescale}>重新缩放</Button>
-          <TransformSetting label="转换字符:" labelFor="transform-placeholder">
+          <Button onClick={this.rescale}>Resize</Button>
+          <TransformSetting label="Converted Chars:" labelFor="transform-placeholder">
             <input type="text" id="transform-placeholder" className="transform-placeholder-input" name="transform-placeholder" value={this.state.transformPlaceholder} onChange={this.setTransformPlaceholder} />
           </TransformSetting>
-          <Button onClick={this.transform}>开始转化</Button>
+          <Button onClick={this.transform}>Convert</Button>
         </Row>
         <Divide/>
         <Row>
           <ImagePreviewUpload file={this.state.file} image={this.state.rawImage} setImageAndFile={this.setImageAndFile} previewWidth={parseInt(this.state.transformWidth)} ref={this.imagePreview}></ImagePreviewUpload>
         </Row>
         <FramesModal ref={this.framesModal} frames={this.state.transformResult} file={this.state.file} />
-        <p className="helps">转化GIF或较大的图片时，可能会出现一定程度的卡顿，属于正常现象，请耐心等待。</p>
+        <p className="helps">When converting GIF or larger images, there may be a certain degree of lag, which is normal, please be patient。</p>
         <p className="copyright text-center">
           <a href="https://github.com/kainstar">Author: kainstar</a>, <a href="https://github.com/kainstar/image-to-text">Project Repository</a>
         </p>

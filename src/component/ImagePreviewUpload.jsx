@@ -131,7 +131,7 @@ export default class ImagePreviewUpload extends React.Component {
         targetWidth = image.width
       }
     } else if (targetWidth > container.clientWidth) {
-      alert('超过容器大小！请重新输入图片宽度')
+      alert('Exceeds container size! Please re-enter image width')
       return
     }
 
@@ -157,7 +157,7 @@ export default class ImagePreviewUpload extends React.Component {
         ref={this.componentRef}
       >
         <input type="file" style={{ display: 'none' }} accept="image/*" ref={this.fileUpload} onChange={this.setFile} />
-        <span className="upload-label">上传图片</span>
+        <span className="upload-label">Upload</span>
         {this.props.image ? <img ref={this.currentImageRef} src={this.props.image.src} className="preview-image" /> : null}
       </div>
     )
