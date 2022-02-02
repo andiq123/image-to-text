@@ -104,7 +104,7 @@ export default class App extends React.Component {
             <input type="number" id="transform-size" className="transform-size-input" name="transform-size" value={this.state.transformWidth} onChange={this.setTransformWidth} />
           </TransformSetting>
           <Button onClick={this.rescale}>Resize</Button>
-          <TransformSetting label="Converted Chars:" labelFor="transform-placeholder">
+          <TransformSetting label="Chars to use:" labelFor="transform-placeholder">
             <input type="text" id="transform-placeholder" className="transform-placeholder-input" name="transform-placeholder" value={this.state.transformPlaceholder} onChange={this.setTransformPlaceholder} />
           </TransformSetting>
           <Button onClick={this.transform}>Convert</Button>
